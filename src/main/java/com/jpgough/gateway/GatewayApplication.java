@@ -14,7 +14,7 @@ public class GatewayApplication {
 		return builder.routes()
 				.route("tasks", r -> r.path("/tasks/**")
 				.filters(f -> f.rewritePath("/tasks/(?<segment>.*)", "/${segment}"))
-				.uri("http://task-service:8080"))
+				.uri("http://todo-service:8080"))
 				.build();
 	}
 
